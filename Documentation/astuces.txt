@@ -1,0 +1,17 @@
+[int(k) for k in input().split()]
+
+-----------------------------------------
+-----------------------------------------
+print(  ,end='') ne retour pas a la ligne
+a=round(a,n)    garder n chiffres après la virgule de a
+
+-----------------------------------------
+-----------------------------------------
+a=chaine de caractère
+a.strip(chaine de caractères)  #enlève cette chaine du début et du fin de a si elle existe
+a.capitalize() rendre tous les lettres de a minuscules sauf le 1er
+--------------------------------------
+--------------------------------------
+in C++, donner une précision n à un float
+cout<<fixed<<setpricision(n)<<float_numbre<<endl
+

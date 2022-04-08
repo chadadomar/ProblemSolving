@@ -1,0 +1,71 @@
+Une variable dans C est la donnée de deux éléments: Adresse et valeure;
+Ainsi pour modifier une variable on doit avoire son adreese (par opérateur &) pour agir sur sa valeur.
+exemple:
+script1
+****
+void f(int a){
+	a=10;
+}
+
+int main(){
+	int a=9;
+	f(a);
+	printf("%d",a);
+} 
+****
+la valeur affichée est 9
+
+script2
+****
+void f(int* pa){
+	*pa=10;
+	//* opérateur de déférencement//
+}
+
+int main(){
+	int a=9;
+	f(a);
+	printf("%d",a);
+} 
+****
+la valeur affichée est 10 marbou7a.c
+
+II-Tableau:
+1-défnition:
+C'est un pointeur constant qui comporte l'adresse du 1er élément 
+exemple:
+script:
+****
+int t[5]={1,5,7}
+printf("%d %d", t , &t[0])
+*****
+les valeurs affichées 635722 635722
+
+script:
+****
+int t[5]={1,5,7}
+printf("%d %d", *t , t[0])
+*****
+les valeurs affichées 1 1
+
+2-les adresses des éléments sont décalés par la taille du type : Arithmétiques des pointeurs
+  premier Loi fondamentale de Anass Boumali	t[i]=*(t+i)   safi salinaaaa!
+  deuxième Loi fondamentale de Anass Boumali    t[i][j]=*(*(t+i)+j)
+
+
+3-Allocation dynamique de la mémoire:
+int* t=(int*)malloc(10*sizeof(int)) // réserver un espace mémoire de taille de 10 entier
+int* t=(int*)calloc(10*sizeof(int)) // réserver un espace mémoire après la nettoyer de taille de 10 entier
+realloc(pointeur, new size) // changer la taille
+free(t) // c'est pour libere l'espace mémoire allouée
+
+
+allocation dynamique d'une matrice:
+char**
+
+Remararques générales:
+** longuer d'une chaine de caratères : strlent()
+** condition ternaire  (condition)? valeur1:valeur2  donne valeur1 si condition vérifiée valeur2 sinon 
+** Java, C# travaille par réference 
+** Danc C il ya pas de nettoyage de mémoire
+** les constantes sont à déclarées au haut du scripte : define CNT=100 

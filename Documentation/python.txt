@@ -1,0 +1,44 @@
+python:
+=========================================================
+write in file:
+=========================================================
+file = open(“testfile.txt”,”w”) 
+ 
+file.write(“Hello World”) 
+file.write(“This is our new text file”) 
+file.write(“and this is another line.”) 
+file.write(“Why? Because we can.”) 
+ 
+file.close() 
+============================================================
+import fileinput
+
+
+for line in fileinput.input():
+    
+	pass
+=============================================================
+for line in sys.stdin:
+  
+	print line
+
+
+=============================================================
+
+with open("powersearch.txt") as fileIn:
+    
+	for line in fileIn:
+        
+		print line
+
+=============================================================
+with open("powersearch.txt") as fileIn:
+   
+for line in fileIn:
+        
+	#you read one line than you split it into two integers
+        
+	n1, n2 = (int(s) for s in line.split())
+        
+	print(n1, n2)
+
